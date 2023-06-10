@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, lightpink, orange, royalblue);
+}
+
+header {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4%;
+    color: rgb(0, 255, 255);
+}
+
+/* For Img */
+img {
+    margin-left: 30%;
+    margin-top: 2%;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Comment And Reply container */
+.comment-container {
+    margin-left: 30%;
+    width: 40%;
+}
+
+/* Reply form */
+.reply {
+    padding: 1.5%;
+    font-weight: bold;
+    background: gainsboro;
+    text-align: center;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.reply:hover {
+    background: transparent;
+    color: #48cae4;
+    border-radius: 25px;
+    border: 3px solid #48cae4;
+    box-shadow: 0 4px 8px 0 rg ba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease-in;
+}
+
+/* Comment and Reply form */
+.card {
+    text-align: center;
+    border-radius: 8px;
+    padding: 9px;
+}
+
+/* Comment and Reply text */
+.text {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-bottom: 1%;
+}
+
+/* For Comment Form to fill details */
+.comment-details {
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+}
+
+.input {
+    border-top-width: initial;
+    border-right-width: initial;
+    border-left-width: initial;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-left-color: initial;
+    width: 40%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 35%;
+    margin-top: 3rem;
+    border-style: none none solid;
+    border-image: initial;
+    background: transparent;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    outline: none;
+}
+
+.btn {
+    width: 7rem;
+    height: 3rem;
+    margin-left: 2rem;
+    background-color: #48cae4;
+    color: orangered;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid pink;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease-out;
+}
+
+.btn:hover {
+    background: orangered;
+    color: #48cae4;
+    border-radius: 25px;
+    border: 3px solid #48cae4;
+    font-size: 22px;
+    transition: 0.3s ease-in;
+}
+
+/* For Reply to give gap from comment  */
+.all-comment:not(:first-child) {
+    margin-left: 5rem;
+}
+
+/* Results of Comment and Reply form */
+.cardcomment {
+    margin-top: -2%;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+/* To GIve Gap Bitween teo results (text adn reply btn) */
+.cardcomment span {
+    margin-bottom: 1%;
+}
+
+/* Reply btn of reply the comment */
+.rreply {
+    padding: 1.5%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    color: royalblue;
+    cursor: pointer;
+    z-index: 110;
+    margin-left: 2%;
+}

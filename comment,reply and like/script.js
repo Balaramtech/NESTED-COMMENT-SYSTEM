@@ -12,17 +12,20 @@ function createInputBox() {
 
     return div;
 }
+
 /* To Show the results */
 function addReply(text) {
     let div = document.createElement("div");
     div.setAttribute("class", "all-comment");
     div.innerHTML += `
-        <div class="cardcomment">
+        <div class="cardcomment" id="forremove">
             <span class="text">${text}</span>
             <span id="reply" class="rreply">Add Reply</span>
+            <button class="remove" onclick="myFunction()">Remove Comment</button>
         </div>`;
     return div;
 }
+
 /* Click Event */
 commentContainer.addEventListener("click", function (e) {
     let replyClicked = e.target.classList.contains("reply");
@@ -38,6 +41,7 @@ commentContainer.addEventListener("click", function (e) {
     if (rreplyClicked) {
         // add input box
         closestCard.appendChild(createInputBox());
+        
     }
 
     if (submitClicked) {
@@ -47,6 +51,11 @@ commentContainer.addEventListener("click", function (e) {
             closestCard.appendChild(addReply(commentDetails.children[0].value));
             commentDetails.remove();
         }
-
     }
 })
+
+/* To Remove the Added comments or Replys */
+function myFunction() {
+    let x = document.getElementById("forremove");
+    x.remove(x.selectedIndex);
+}

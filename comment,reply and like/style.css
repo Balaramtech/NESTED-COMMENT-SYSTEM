@@ -1,9 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body {
     background: linear-gradient(to left, lightpink, orange, royalblue);
 }
@@ -32,7 +26,6 @@ img {
     border-radius: 8px;
     padding: 9px;
 }
-
 
 /* For Likes */
 #likeme {
@@ -138,6 +131,7 @@ p{
     padding-top: 1%;
     font-size: 22px;
 }
+
 .reply {
     padding: 5px;
     font-size: 15px;

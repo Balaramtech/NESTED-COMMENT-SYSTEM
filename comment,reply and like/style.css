@@ -25,15 +25,20 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Comment And Reply container */
-.comment-container {
-    margin-left: 30%;
-    width: 40%;
+/* Comment and Reply form */
+.card {
+    display: grid;
+    text-align: center;
+    border-radius: 8px;
+    padding: 9px;
 }
 
-/* Reply form */
-.reply {
-    padding: 1.5%;
+
+/* For Likes */
+#likeme {
+    width: 16%;
+    padding: .5%;
+    margin-left: 29.8%;
     font-weight: bold;
     background: gainsboro;
     text-align: center;
@@ -42,50 +47,64 @@ img {
     transition: 0.3s ease-in;
 }
 
-.reply:hover {
+#likeme:hover {
     background: transparent;
     color: #48cae4;
-    border-radius: 25px;
+    border-radius: 20px;
     border: 3px solid #48cae4;
     box-shadow: 0 4px 8px 0 rg ba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s ease-in;
 }
 
-/* Comment and Reply form */
-.card {
+/* Reply form */
+.cmtreply {
+    width: 16%;
+    padding: .5%;
+    font-weight: bold;
+    background: gainsboro;
     text-align: center;
-    border-radius: 8px;
-    padding: 9px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    margin-left: 53.9%;
+    margin-top: -4%;
 }
 
-/* Comment and Reply text */
-.text {
-    display: block;
-    font-size: 20px;
+.cmtreply:hover {
+    background: transparent;
+    color: #48cae4;
+    border-radius: 20px;
+    border: 3px solid #48cae4;
+    box-shadow: 0 4px 8px 0 rg ba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease-in;
+}
+
+.spancmt{
+    font-size: 35px;
     font-weight: bold;
     margin-top: 1rem;
     padding-bottom: 1%;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
-/* For Comment Form to fill details */
-.comment-details {
-    display: flex;
-    align-items: center;
-    margin-top: 11px;
+#comments{
+    margin-left: 30%;
+    padding: 1%;
+    width: 40%;
 }
 
-.input {
+input {
+    margin-left: 30%;
     border-top-width: initial;
     border-right-width: initial;
     border-left-width: initial;
     border-top-color: initial;
     border-right-color: initial;
     border-left-color: initial;
-    width: 40%;
+    width: 30%;
     font-size: 18px;
-    margin-bottom: 10px;
-    margin-left: 35%;
-    margin-top: 3rem;
     border-style: none none solid;
     border-image: initial;
     background: transparent;
@@ -93,53 +112,78 @@ img {
     outline: none;
 }
 
-.btn {
-    width: 7rem;
-    height: 3rem;
-    margin-left: 2rem;
-    background-color: #48cae4;
-    color: orangered;
+#post-main-reply{
+    padding: 1%;
     font-weight: bold;
+    background: gainsboro;
+    text-align: center;
     font-size: 20px;
-    border: 3px solid pink;
     cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.3s ease-out;
-}
-
-.btn:hover {
-    background: orangered;
-    color: #48cae4;
-    border-radius: 25px;
-    border: 3px solid #48cae4;
-    font-size: 22px;
     transition: 0.3s ease-in;
 }
 
-/* For Reply to give gap from comment  */
-.all-comment:not(:first-child) {
-    margin-left: 5rem;
+#post-main-reply:hover {
+    background: transparent;
+    color: #48cae4;
+    border-radius: 15px;
+    border: 3px solid #48cae4;
+    box-shadow: 0 4px 8px 0 rg ba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease-in;
 }
 
-/* Results of Comment and Reply form */
-.cardcomment {
-    margin-top: -2%;
-    border-bottom: 1px solid rgb(204, 204, 204);
+/* Reply Details */
+/* Reply Text */
+p{
+    padding-left: 5%;
+    padding-top: 1%;
+    font-size: 22px;
+}
+.reply {
+    padding: 5px;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 1%;
+    text-align: justify;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease-in;
 }
 
-/* To GIve Gap Bitween teo results (text adn reply btn) */
-.cardcomment span {
-    margin-bottom: 1%;
+.like{
+    width: 10%;
+    margin-left: 8%;
+    padding: 5px;
+    font-size: 15px;
+    transition: 0.3s ease-in;
 }
 
-/* Reply btn of reply the comment */
-.rreply {
-    padding: 1.5%;
-    font-weight: bold;
-    text-align: center;
-    font-size: 18px;
-    color: royalblue;
-    cursor: pointer;
-    z-index: 110;
-    margin-left: 2%;
+.like:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease-in;
+}
+
+.delete{
+    width: 10%;
+    padding: 5px;
+    font-size: 15px;
+    transition: 0.3s ease-in;
+}
+
+.delete:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease-in;
+}
+
+.post-reply{
+    padding: 5px;
+    font-size: 15px;
+    transition: 0.3s ease-in;
+}
+
+.post-reply:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reply .reply-box {
+    margin-left: 20px;
+    padding: 5px;
 }

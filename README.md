@@ -1,7 +1,4 @@
 # NESTED-COMMENT-SYSTEM
-Project Title: Nested Reply System
-
-Project Discription:
 
 This code implements a threaded reply system with nested replies, likes, and delete functionality. Here's a short description of each component:
 1. Reply Box: The initial reply box allows users to enter their replies. It includes a textarea for the reply content and a "Post" button to submit the reply.

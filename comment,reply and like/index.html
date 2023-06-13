@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment, Reply And Like system Nested comments</title>
+    <title>Comment, Reply, Delete And Like system Nested comments</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -15,7 +15,7 @@
     <div class="container">
         <!-- Header -->
         <header>
-            Nested Comment system with like and reply
+            Nested Comment system with like, reply Chain and Delete
         </header>
         <!-- End of Header -->
 
@@ -23,40 +23,23 @@
         <img src="https://dummyimage.com/600x360" alt="">
         <!-- End of DummyPost -->
 
-        <!-- For Comment Form to fill details -->
-        <div class="comment-details">
-            <!-- <input type="text" placeholder="User Name" class="username">
-            <input type="text" placeholder="Add Your Comment" class="input">
-            <button class="btn submit">Post</button> -->
+        <!-- Post Img Like and Comments -->
+        <div class="card">
+            <button id="likeme">LIKE: 0</button>
+            <button id="cmtreply" class="cmtreply" onclick="toggleContent()">COMMENTS</button>
+            <span class="spancmt">Comments</span>
         </div>
-        <!-- End of Comment Form -->
+        <!-- End of Post Img Like and Comments -->
 
-        <!-- Comment And Reply container  -->
-        <div id="comment-container" class="comment-container">
-
-            <!-- For All Comments and Replys -->
-            <div class="all-comment">
-
-                <!-- Comment and Reply form -->
-                <div class="card">
-                    <span id="reply" class="reply">Add Comment</span>
-                    <span class="text">Comments</span>
-                </div>
-                <!-- End of Comment and Reply form -->
-
-                <!-- Results of Comment and Reply form -->
-                <div class="cardcomment">
-                    <!-- <span class="text">${text}</span>
-                    <span id="rreply" class="rreply">Add Reply</span> -->
-                </div>
-                <!-- End of Results -->
-
+        <!-- Comment and Reply form -->
+        <div id="comments" style="display: none;">
+            <div class="reply-box">
+              <input id="main-reply" placeholder="Enter your Comment"></input>
+              <button id="post-main-reply">Post</button>
             </div>
-            <!-- End of All Comments and Replys -->
-            
-        </div>
-        <!-- End of Comment And Reply container  -->
-
+          </div>
+        <!-- End of Comment and Reply form -->
+          
     </div>
 
     <script src="script.js"></script>

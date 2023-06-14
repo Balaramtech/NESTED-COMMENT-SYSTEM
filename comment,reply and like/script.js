@@ -1,3 +1,34 @@
+/* Toggle(display none and block) for main comment input */
+function toggleContent() {
+    var content = document.getElementById("comments");
+    if (content.style.display === "none") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+}
+
+/* Post Img Like Count */
+var like = document.getElementById("likeme"),
+    count = 0;
+like.onclick = function () {
+    count += 1;
+    like.innerHTML = "Likes: " + count;
+};
+
+/* Function to handle posting the main reply */
+function postMainReply() {
+    const mainReplyContent = document.getElementById("main-reply").value;
+    if (mainReplyContent.trim() !== "") {
+        addReply(mainReplyContent);
+        document.getElementById("main-reply").value = "";
+    }
+}
+
+/* Add event listener for post main reply button */
+const postMainReplyButton = document.getElementById("post-main-reply");
+postMainReplyButton.addEventListener("click", postMainReply);
+
 /* Function to create a new reply element */
 function createReplyElement(content) {
     const replyElement = document.createElement("div");
@@ -11,28 +42,10 @@ function createReplyElement(content) {
     <div class="reply-box" style="display: none;">
       <input placeholder="Enter your reply"></input>
       <button class="post-reply">Post</button>
-    </div>
+    </div>  
     <div class="replies"></div>
   `;
     return replyElement;
-}
-
-/* Post Img Like Count */
-var like = document.getElementById("likeme"),
-    count = 0;
-like.onclick = function () {
-    count += 1;
-    like.innerHTML = "Likes: " + count;
-};
-
-/* Toggle(display none and block) for main comment input */ 
-function toggleContent() {
-    var content = document.getElementById("comments");
-    if (content.style.display === "none") {
-        content.style.display = "block";
-    } else {
-        content.style.display = "none";
-    }
 }
 
 
@@ -96,16 +109,3 @@ function addReply(content, parentReply = null) {
     const replyButton = replyElement.querySelector(".reply");
     replyButton.addEventListener("click", toggleReplyBox);
 }
-
-/* Function to handle posting the main reply */
-function postMainReply() {
-    const mainReplyContent = document.getElementById("main-reply").value;
-    if (mainReplyContent.trim() !== "") {
-        addReply(mainReplyContent);
-        document.getElementById("main-reply").value = "";
-    }
-}
-
-/* Add event listener for post main reply button */
-const postMainReplyButton = document.getElementById("post-main-reply");
-postMainReplyButton.addEventListener("click", postMainReply);

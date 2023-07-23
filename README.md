@@ -7,3 +7,6 @@ This code implements a threaded reply system with nested replies, likes, and del
 4. Deleting Replies: Clicking the "Delete" button for a reply removes that reply and all its nested replies from the thread, effectively deleting the entire chain of replies under that reply.
 
 The code achieves the functionality using HTML, CSS, and JavaScript. It dynamically creates reply elements, handles posting replies, tracks the number of likes for each reply, allows nested replies, and enables reply deletion.
+
+
+![comtandreply](https://github.com/Balaramtech/NESTED-COMMENT-SYSTEM/assets/65490609/56c94cad-ec88-4f38-9e3a-9a5b74b311cf)
